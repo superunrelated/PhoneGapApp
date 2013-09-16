@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>PhoneGapApp</title>
+  </head>
+  <body>
+    <div id="mainview" class="mainview">
+      
+      <div id="introview" class="view">
+        <div id="deviceready" class="blink">
+          <p class="event listening">Connecting to Device</p>
+          <p class="event received">Device is Ready</p>
+        </div>
+        <button name="startbutton">start</button>
+      </div>
+  
+      <div id="gameview" class="view">
+        <canvas id="game" class="game" width="500" height="500">
+      </div>
+    <div>
+
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/libs.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      (function() {
+        var config = {};
+        require("dom.ready")(function() {
+          var Application = require("Application")
+          window.app = new Application(config)
+        });
+      })();
+    </script>
+  </body>
+</html>
